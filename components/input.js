@@ -6,7 +6,10 @@ import {
     XIcon,
   } from "@heroicons/react/outline";
   import { useRef, useState } from "react";
+  import "emoji-mart/css/emoji-mart.css";
   import { Picker } from "emoji-mart";
+
+
 
   function Input() {
     const [input, setInput] = useState("");
@@ -43,7 +46,7 @@ import {
         }`}
       >
         <img
-          src="https://rb.gy/ogau5a"
+          src="https://pbs.twimg.com/profile_images/1518391475687493633/Bb6zQKr8_400x400.jpg"
           alt=""
           className="h-11 w-11 rounded-full cursor-pointer"
         //   onClick={signOut}
