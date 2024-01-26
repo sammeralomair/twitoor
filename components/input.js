@@ -27,7 +27,7 @@ import {
     const filePickerRef = useRef(null);
     const [showEmojis, setShowEmojis] = useState(false);
   
-    const sendPost = (e) => {
+    const sendPost = async (e) => {
       if (loading) return;
       setLoading(true);
 
