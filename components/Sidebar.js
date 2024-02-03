@@ -1,6 +1,8 @@
 import Image from "next/image";
 import { HomeIcon } from "@heroicons/react/solid";
 import SidebarLink from "./SidebarLink";
+import { useSession } from "next-auth/react";
+
 import {
     HashtagIcon,
     BellIcon,
@@ -13,6 +15,8 @@ import {
   } from "@heroicons/react/outline";
 
 function Sidebar() {
+    const {data: session} = useSession();
+
     return (
     <div className="hidden sm:flex flex-col items-center xl:items-start xl:w-[340px] p-2 fixed h-full">
       <div className="flex items-center justify-center w-14 h-14 hoverAnimation p-0 xl:ml-24">
@@ -35,7 +39,7 @@ function Sidebar() {
         className="text-[#d9d9d9] flex items-center justify-center mt-auto hoverAnimation xl:ml-auto xl:-mr-5"
       >
         <img
-          src="https://pbs.twimg.com/profile_images/1518391475687493633/Bb6zQKr8_400x400.jpg"
+          src={session.user.image}
           alt=""
           className="h-10 w-10 rounded-full xl:mr-2.5"
         />
