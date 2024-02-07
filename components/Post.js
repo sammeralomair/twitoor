@@ -25,14 +25,14 @@ import {
   import { useEffect, useState } from "react";
   import Moment from "react-moment";
   import { useRecoilState } from "recoil";
-//   import { modalState, postIdState } from "../atoms/modalAtom";
+  import { modalState, postIdState } from "../atoms/modalAtom";
   import { db } from "../firebase";
 
 
 function Post({ id, post, postPage }) {
     const { data: session } = useSession();
-    // const [isOpen, setIsOpen] = useRecoilState(modalState);
-    // const [postId, setPostId] = useRecoilState(postIdState);
+    const [isOpen, setIsOpen] = useRecoilState(modalState);
+    const [postId, setPostId] = useRecoilState(postIdState);
     const [comments, setComments] = useState([]);
     const [likes, setLikes] = useState([]);
     const [liked, setLiked] = useState(false);
