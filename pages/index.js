@@ -4,7 +4,7 @@ import Feed from "../components/Feed";
 import { getProviders, getSession, useSession } from "next-auth/react";
 import Login from "../components/Login";
 import Modal from "../components/Modal";
-
+// localizing bug
 
 export default function Home({ trendingResults, followResults, providers }) {
     const {data: session} = useSession();
@@ -21,9 +21,9 @@ export default function Home({ trendingResults, followResults, providers }) {
             <main className="bg-black min-h-screen flex max-w-[1500px] mx-auto"> 
                 <Sidebar />
                 <Feed />
-                {/* Widgets */}
+                <Widgets />
                 
-                <Modal />
+                {isOpen && <Modal />}
             </main>
         </div>
     );
