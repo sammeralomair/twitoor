@@ -20,7 +20,7 @@ import dynamic from "next/dynamic";
 // const Picker = dynamic(() => import("emoji-picker-react"), { ssr: false });
 import { Picker } from "emoji-mart";
 import "emoji-mart/css/emoji-mart.css";
-
+// fixing this file
 function Input() {
   const { data: session } = useSession();
   const [input, setInput] = useState("");
